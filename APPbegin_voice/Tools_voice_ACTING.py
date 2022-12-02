@@ -11,7 +11,7 @@ def voice_ACTING(TheDoc): #TheDoc - текст от юзера с фронта
     duoForURL = None
     try:
         tts = gTTS( text = TheDoc, lang = 'ru' )
-        tts.save( F'media//{msk}_Filename.mp3' ) #Save in dir mp3 (внимание к настройкам Джанго: медиа)
+        tts.save( F'media//{msk}_Filename.mp3' ) #Save in dir mp3 
         s_N_P = str(F'{msk}_Filename.mp3') #Name new line in DB
         ThreeForURL = randint(100, 999) #Заготовка для идентификации по номеру в БД (по части url)
         duoForURL = randint(10, 99) #Вторая часть заготовки для идентификации по номеру в БД (по части url)  
