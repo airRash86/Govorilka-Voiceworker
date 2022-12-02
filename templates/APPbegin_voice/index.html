@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" type="text/css"  href="{% static 'APPbegin_voice/css/STYLE.css' %}">
+    <title>Озвучка</title>
+    <link rel="shortcut icon" type="image/png" href="{% static "favicon.ico" %}">
+</head>
+<body>
+<h1><center><img  src="{% static 'APPbegin_voice/img/mega.jpg' %}" > Страница озвучки</center></h1>
+
+<center><form  name="ourForm">
+    {% csrf_token %}
+    <textarea  type="text" placeholder="Введите текст" name="ourForm__inp" cols="29" rows="11"></textarea><br>
+    <button type="submit" id="btn" name="ourForm__BTN">Озвучить!</button>
+    <button type="reset">Очистить поле ввода</button>
+</form><center>
+<script type="text/javascript" src="{% static 'APPbegin_voice/js/SCR_For_index.js' %}"></script>
+
+<h4><font id="AlarmLenTEXT" color="red"></font></h4>
+
+<h3><font id="headLoading" color="red"></font></h3>
+<h4 id="secondLoading"></h4>
+
+</body>
+</html>
+
